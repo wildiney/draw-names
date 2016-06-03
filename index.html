@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Sorteio Ciab</title>
+
+        <link href="vendor/twbs/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+        <link href="css/layout.css" rel="stylesheet" type="text/css">
+
+    </head>
+    <body role="document">
+        <div class="container">
+            <div class="row">
+            <div class="col-md-6 col-sm-6">
+                <img id="logo" src="img/logo-indra.png" width="150" alt=""/>
+            </div>
+            <div class="col-md-6 col-sm-6">
+                <h1>Formulário de Cadastro</h1>
+                <!--// p class="lead"></p //-->
+            </div>
+                </div>
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12">
+                    <form id="form_cadastro" name="form_cadastro" action="cadastro.php" method="POST">
+                        <div class="form-group">
+                            <label for="nome">Nome:</label>
+                            <input class="form-control" name="nome" id="nome" value="" type="text" placeholder="Nome Completo">
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6 col-sm-6">
+                                <div class="form-group">
+                                    <label for="email">Email</label>
+                                    <input class="form-control" name="email" id="email" value="" type="email" placeholder="Email Corporativo">
+                                </div>
+                            </div>
+
+                            <div class="col-md-6  col-sm-6">
+                                <div class="form-group">
+                                    <label for="telefone">Telefone:</label>
+                                    <input class="form-control" name="telefone" id="telefone" value="" type="tel" placeholder="(00) 0000-0000">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="empresa">Empresa</label>
+                            <input class="form-control" name="empresa" id="empresa" value="" type="text" placeholder="Empresa">
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-6  col-sm-6">
+                                <div class="form-group">
+                                    <label for="cargo">Cargo</label>
+                                    <input class="form-control" name="cargo" id="cargo" value="" type="text" placeholder="Cargo">
+                                </div>
+                            </div>
+                            <div class="col-md-6  col-sm-6">
+                                <div class="form-group">
+                                    <label for="cargo">Departamento</label>
+                                    <input class="form-control" name="departamento" id="departamento" value="" type="text" placeholder="Cargo">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-6 col-sm-6">
+                                <label>Área</label>
+                                <select class="form-control">
+                                    <option value="TI">TI</option>
+                                    <option value="Operações">Operações</option>
+                                    <option value="Negócios">Negócios</option>
+                                    <option value="Outros">Outros</option>
+                                </select>
+                            </div>
+                            <div class="col-md-6 col-sm-6">
+                                <label>&nbsp;</label>
+                                <input class="form-control" type="text">
+                            </div>
+                        </div>
+                        <p>&nbsp;</p>
+                        <div class="row">
+                            <div class="col-md-6 col-sm-6">
+                                <div class="form-group">
+                                    <label>Setor</label>
+                                    <div class="checkbox">
+                                        <label><input type="checkbox" name="solucoes" id="checkbox-1a" class="" />Bancos</label>
+                                    </div>
+                                    <div class="checkbox">
+                                        <label><input type="checkbox" name="solucoes" id="checkbox-1a" class="" />Seguros</label>
+                                    </div>
+                                    <div class="checkbox">
+                                        <label><input type="checkbox" name="solucoes" id="checkbox-1a" class="" />Meios de pagamento</label>
+                                    </div>
+                                    <div class="checkbox">
+                                        <label><input type="checkbox" name="solucoes" id="checkbox-1a" class="" />Outros</label>
+                                    </div>
+                                <input class="form-control" type="text">
+                                </div>
+                            </div>
+
+                            <div class="col-md-6 col-sm-6">
+                                <label>Quais soluções da Indra você tem interesse</label>
+
+                                <div class="checkbox">
+                                    <label><input type="checkbox" name="solucoes" id="checkbox-1a" class="" />Solução 01</label>
+                                </div>
+                                <div class="checkbox">
+                                    <label><input type="checkbox" name="solucoes" id="checkbox-1a" class="" />Solução 02</label>
+                                </div>
+                                <div class="checkbox">
+                                    <label><input type="checkbox" name="solucoes" id="checkbox-1a" class="" />Solução 03</label>
+                                </div>
+                                <div class="checkbox">
+                                    <label><input type="checkbox" name="solucoes" id="checkbox-1a" class="" />Solução 04</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">    
+                            <label for="select-native-1">Atendido por:</label>
+                            <select class="form-control" name="select-native-1" id="select-native-1">
+                                <option data-placeholder="true"></option>
+                                <option value="1">Fulano 01</option>
+                                <option value="2">Fulano 02</option>
+                                <option value="3">Fulano 03</option>
+                                <option value="4">Fulano 04</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <input class="btn" data-theme="b" data-role="button" name="enviar" id="enviar" value="ENVIAR" type="submit">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!--// SCRIPTS //-->
+        <script src="vendor/components/jquery/jquery.min.js" type="text/javascript"></script>
+        <script src="vendor/twbs/bootstrap/dist/js/bootstrap.min.js" type="text/javascript"></script>
+        <script src="js/jquery-masked-input-1.4.1/jquery.maskedinput.min.js" type="text/javascript"></script>
+        <script src="js/scripts.js" type="text/javascript"></script>
+    </body>
+</html>

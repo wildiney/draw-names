@@ -1,0 +1,7 @@
+{
+    "name": "wfpimentel",
+    "require": {
+        "twbs/bootstrap":"3.*",
+        "components/jquery": "2.*"
+    }
+}
