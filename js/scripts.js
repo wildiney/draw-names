@@ -30,6 +30,28 @@ function countdown() {
  * Load and execute
  */
 $(document).ready(function () {
-    $("#telefone").mask("(99) 9999-9999");
+    $("#area-outros").hide();
+    $("#setores-outros-input").hide();
+    
+    $("#area").on("change", function(){
+        if($("#area").val()==="Outros"){
+            $("#area-outros").show();
+        } else {
+            $("#area-outros").hide();
+        }
+    });
+    
+    $("#setores-outros-checkbox").on("click", function(){
+        if($("#setores-outros-checkbox").prop('checked') === true){
+            $("#setores-outros-input").show();
+        } else{
+            $("#setores-outros-input").hide();
+        }
+    });
+    
+    
+    // Máscaras
+    $("#telefone").mask("(99) 99999-9999");
+   
 });
 

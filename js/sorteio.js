@@ -1,29 +1,22 @@
 /**
  * SORTEIO
  */
-/**
- * Participantes
- * @type Array
- */
-var participantes = ["ADALBERTO FERREIRA DOS SANTOS", "FABIANA ROSA", "FERNANDA BOCCHIGLIERI", "ERIK SILVA"];
 
-/**
- * Telefone dos participantes
- * @type Array
- */
-var telefones= ["(11) 00000-0000", "(86) 00000-0000", "(86) 00000-0000", "(12) 00000-0000"];
+/****************
+ * CONFIGURAÇÃO *
+ ****************/
 
 /**
  * Id da div referente à entrada do nome
  * @type @exp;document@call;getElementById
  */
-var input_nome=document.getElementById("nome");
+var input_nome=$("#nome");
 
 /**
  * Id da div referente ao telefone
  * @type @exp;document@call;getElementById
  */
-var input_telefone = document.getElementById("telefone");
+var input_telefone = $("#phone");
 
 /**
  * Fields
@@ -39,14 +32,19 @@ var fields = 38; //letras
  */
 var times = 100; //participantes
 
+/***************************************
+ * FUNÇÕES                             *
+ * Não alterar nada abaixo desta linha *
+ ***************************************/
+
 /**
  * Clear Data
  * Limpa os dados de exibição
  * @returns {undefined}
  */
 function cleardata(){
-    input_nome.innerText="";
-    input_telefone.innerText="";
+    input_nome.html("");
+    input_telefone.html("");
 }
 
 /**
@@ -65,13 +63,12 @@ function blink(div){
             } else {
                 d.style.visibility = 'hidden';
             }
-            
             piscar++;
         } else {
             clearInterval(interval);
             d.style.visibility = 'visible';
         }
-    }, 500);
+    }, 200);
 }
 
 /**
@@ -104,9 +101,9 @@ function sorteio(){
         newindice = Math.floor((Math.random() * participantes.length));
         setTimeout("sorteio(participantes[newindice])",10);
         times--;
-        input_nome.innerHTML=nomeSorteado;
+        input_nome.html(nomeSorteado);
     } else {
-        input_nome.innerHTML=nomeSorteado;
+        input_nome.html(nomeSorteado);
         newNumber="";
         for(i=0; i<telefone.length;i++){
             if(i>4 && i<10){
@@ -115,16 +112,35 @@ function sorteio(){
                 newNumber += telefone[i];
             }
         }
-        input_telefone.innerHTML = newNumber;
+        input_telefone.html(newNumber);
         blink("resultado");
         times = 100; 
     }
 }
 
 /**
- * Load and execute
+ * Banner
+ * Função de controle de exibição dos banners
+ * @returns {undefined}
  */
-$(document).ready(function () {
-    $("#sortear").on("click",sorteio);
-});
+function banner(){
+    imgbanner="";
+    var date = new Date();
+    var today = date.getFullYear()+"/"+(date.getMonth()+1)+"/"+(date.getDate());
+    switch(today){
+        case dataSorteioIphone:
+            imgbanner = "banner_iphone.png";
+            break;
+        case dataSorteioWatch:
+            imgbanner = "banner_watch.png";
+            break;
+        case dataSorteioIpad:
+            imgbanner = "banner_ipad.png";
+            break;
+        default:
+            imgbanner = "banner_watch.png";
+            break;
+    }
+    $("#wrapper-banner").html("<img src='img/" + imgbanner + "' class='banner img-responsive' />");
+}
 

@@ -31,7 +31,6 @@ h1{
 }
 .banner{
     margin:0 auto;
-    height: 250px;
 }
 .img-rounded{
     border-radius:15px;
@@ -40,8 +39,8 @@ h1{
     border:1px solid gray;
 }
 .resultado{
-    margin:30px 0 20px 0;
-    min-height: 200px;
+    margin:40px 0 20px 0;
+    min-height: 230px;
     font-family: Arial;
     font-size: 2.8em;
     font-weight: bold;
@@ -77,4 +76,7 @@ h1{
 }
 .btn-sorteio{
     margin-bottom:20px;
+}
+#phone{
+    padding-top:30px;
 }
