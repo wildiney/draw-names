@@ -14,3 +14,4 @@ As soon as possible, will be refactored to extend properties and make more custo
 ## Screenshots
 
 ![screenshots](https://github.com/wildiney/draw-names/blob/master/screenshots/screenshot-01.png)
+![screenshots](https://github.com/wildiney/draw-names/blob/master/screenshots/screenshot-02.png)
