@@ -1,82 +1,127 @@
-body{
-    background:url('../img/bg_ipad.jpg') no-repeat center center;
-    background-size: cover !important;
-    background-color: #000;
+html,
+body {
+  height: 100%;
+  width: 100%;
 }
-.container{
-    background-color: rgba(255,255,255,0.95);
-    margin-top:20px;
-    margin-bottom:20px;
+body {
+  position: absolute;
+  background: url('../img/bg_ipad.jpg');
+  background-repeat: no-repeat;
+  background-size: cover !important;
+  background-color: #fff;
+  background-position: center;
+}
+.container {
+  position: relative;
+  display: block;
+  margin: 0 auto;
+  background-color: rgba(255, 255, 255, 0.95);
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.75);
+}
+#logo {
+  margin: 20px 0;
+}
+h1 {
+  font-size: 2em;
+  font-weight: bold;
+  margin-top: 30px;
+}
+.redirecting {
+  text-align: center;
+  margin: 30px 0;
+  font-weight: bold;
+}
+#segundos {
+  font-size: 3em;
+}
+.wrapper-banner {
+  background-color: #c6c6c6;
+}
+.banner {
     border-radius: 10px;
-    box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.75);
+  margin: 10px auto;
 }
-#logo{
-    margin:20px 0;
+.img-rounded {
+  border-radius: 15px;
 }
-h1{
-    font-size: 2em;
-    font-weight: bold;
-    margin-top:30px;
+.img-border {
+  border: 1px solid gray;
 }
-.redirecting{
-    text-align: center;
-    margin:30px 0;
-    font-weight: bold;
-}
-#segundos{
-    font-size: 3em;
-}
-.wrapper-banner{
-    background-color:#c6c6c6;
-}
-.banner{
-    margin:0 auto;
-}
-.img-rounded{
-    border-radius:15px;
-}
-.img-border{
-    border:1px solid gray;
-}
-.resultado{
-    margin:40px 0 20px 0;
-    min-height: 230px;
-    font-family: Arial;
-    font-size: 2.8em;
-    font-weight: bold;
-    text-align: center;
+.resultado {
+  margin: 40px 0 20px 0;
+  min-height: 230px;
+  font-family: Arial;
+  font-size: 2.8em;
+  font-weight: bold;
+  text-align: center;
 }
 
-.quad{
-    border: 3px outset gray;
-    border-radius: 15px;
+.quad {
+  border: 3px outset gray;
+  border-radius: 15px;
 
-    /*color:white;*/
-    color: rgba(255,255,255, 0.9);
-    text-shadow: 1px 1px 0 rgba(140,140,140,0.6) , -2px -2px 2px rgba(0,0,0,0.8) ;
+  /*color:white;*/
+  color: rgba(255, 255, 255, 0.9);
+  text-shadow: 1px 1px 0 rgba(140, 140, 140, 0.6),
+    -2px -2px 2px rgba(0, 0, 0, 0.8);
 
-    margin:1px;
-    display:block;
-    float: left;
+  margin: 1px;
+  display: block;
+  float: left;
 
-    /* BACKGROUND */
-    background: #959595;
-    background: -moz-linear-gradient(top, #959595 0%, #0d0d0d 46%, #010101 50%, #0a0a0a 53%, #4e4e4e 76%, #383838 87%, #1b1b1b 100%);
-    background: -webkit-linear-gradient(top, #959595 0%,#0d0d0d 46%,#010101 50%,#0a0a0a 53%,#4e4e4e 76%,#383838 87%,#1b1b1b 100%);
-    background: linear-gradient(to bottom, #959595 0%,#0d0d0d 46%,#010101 50%,#0a0a0a 53%,#4e4e4e 76%,#383838 87%,#1b1b1b 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#959595', endColorstr='#1b1b1b',GradientType=0 );
-    
-    /* BLUR 
+  /* BACKGROUND */
+  background: #959595;
+  background: -moz-linear-gradient(
+    top,
+    #959595 0%,
+    #0d0d0d 46%,
+    #010101 50%,
+    #0a0a0a 53%,
+    #4e4e4e 76%,
+    #383838 87%,
+    #1b1b1b 100%
+  );
+  background: -webkit-linear-gradient(
+    top,
+    #959595 0%,
+    #0d0d0d 46%,
+    #010101 50%,
+    #0a0a0a 53%,
+    #4e4e4e 76%,
+    #383838 87%,
+    #1b1b1b 100%
+  );
+  background: linear-gradient(
+    to bottom,
+    #959595 0%,
+    #0d0d0d 46%,
+    #010101 50%,
+    #0a0a0a 53%,
+    #4e4e4e 76%,
+    #383838 87%,
+    #1b1b1b 100%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#959595', endColorstr='#1b1b1b',GradientType=0 );
+
+  /* BLUR 
     color: transparent;
     text-shadow: 0 0 7px #fff;*/
 }
-.quad.nome{
-    width:58px;
-    height:70px;
+#nome{
+    font-size: 2em;
 }
-.btn-sorteio{
-    margin-bottom:20px;
+.quad.nome {
+  width: 74px/*58px*/;
+  height: 70px;
+  font-size: 0.4em;
 }
-#phone{
-    padding-top:30px;
+.btn-sorteio {
+  margin-bottom: 20px;
+}
+#area {
+    text-transform: uppercase;
+  padding-top: 30px;
 }

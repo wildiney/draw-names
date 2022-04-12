@@ -1,7 +1,7 @@
 {
-    "name": "wfpimentel",
+    "name": "wfpimentel/draw",
     "require": {
-        "twbs/bootstrap":"3.*",
+        "twbs/bootstrap": "3.*",
         "components/jquery": "2.*"
     }
 }
